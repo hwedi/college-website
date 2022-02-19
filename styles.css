@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  height: 100vh;
+  background: url(img/msg1074019065-49589.jpg) no-repeat center center/cover;
+}
+
+/* utility classes */
+.container {
+  padding: 2rem;
+}
+
+.overlay {
+  /* overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(75, 75, 75, 0.7) 0%,
+    rgba(0, 0, 0, 0.9) 92%
+  );
+}
+
+#main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#brand {
+  width: 100px;
+  height: 100px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.nav-item a {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.nav-item a:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav-item:first-child a {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.nav-item:last-child a {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.nav-item .current {
+  background-color: white;
+  color: black;
+}
