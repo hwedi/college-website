@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --dark-blue: #112d4e;
+  --light-blue: #3f72af;
+  --gray: #dbe2ef;
+  --white: #f9f7f7;
+
+  /* fonts */
+  --tajwal: "Tajawal", sans-serif;
+  --cairo: "Cairo", sans-serif;
+
+  /* dropdown padding */
+  --dropdown-padding: 0.5rem 0.3rem;
+}
+
+body {
+  background-color: var(--white);
+  font-family: var(--tajwal);
+  /* overflow-x: hidden; */
+  /* overflow: hidden; */
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  white-space: nowrap;
+}
+
+header {
+  height: 100vh;
+}
+
+/* utility classes */
+.container {
+  padding: 0.5rem 2rem;
+}
+
+.main {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.primary {
+  background-color: var(--dark-blue);
+}
+
+/* .overlay {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(75, 75, 75, 0.7) 0%,
+    rgba(0, 0, 0, 0.9) 92%
+  );
+} */
+
+#main-nav {
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#brand {
+  width: 50px;
+  height: 50px;
+}
+
+#search {
+  background-image: ur;
+  border: 1px solid var(--dark-blue);
+  border-radius: 5px;
+  cursor: text;
+  padding: 0 20px;
+  margin-right: 5px;
+  height: 43px;
+  text-align: right;
+  font-family: inherit;
+  opacity: 0.5;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.nav-item a {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.nav-item a:hover {
+  background-color: var(--gray);
+  transition: background-color 0.5s;
+}
+
+.nav-item .main:hover {
+  color: var(--dark-blue);
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  margin-right: 3px;
+  position: relative;
+  top: 3px;
+}
+
+/* .nav-item:first-child a {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+} */
+
+/* .nav-item:last-child a {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+} */
+
+/* img-box */
+.svg {
+  position: absolute;
+  top: -135px;
+  left: -80px;
+  /* opacity: 1; */
+  height: 800px;
+  width: 800px;
+  z-index: -1;
+}
+
+/* dropdown styling */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 40px;
+  right: -100px;
+  background-color: #f9f9f9;
+  min-width: 360px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 12px 12px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content-items {
+  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-items .item {
+  margin: 5px;
+}
+
+/* form styling */
+.form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  right: -520px;
+  border-radius: 7px;
+  /* box-shadow: rgba(47, 47, 114, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 500px;
+  width: 800px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.form .form-img {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  left: 0;
+  background: url(assets/img/college-bg.jpg) no-repeat center center/cover;
+}
+
+.overlay {
+  color: white;
+  padding: 12rem 3rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.signin-form {
+  margin: auto;
+  text-align: center;
+  width: 250px;
+}
+
+.signin-form h3 {
+  margin-bottom: 1rem;
+}
+
+.signin-form .log-in {
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
+
+.signin-form .log-in:hover {
+  background-color: var(--light-blue);
+}
+
+.signin-form .sign-up {
+  border: 1px solid var(--dark-blue);
+}
+
+.btn {
+  color: var(--white);
+  cursor: grab;
+  width: 300px;
+  height: 100px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  margin: 5px;
+  transition: background-color 1s;
+}
+
+.overlay p {
+  margin-top: 10px;
+}
